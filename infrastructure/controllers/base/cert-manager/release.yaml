@@ -7,7 +7,7 @@ spec:
   chartRef:
     kind: OCIRepository
     name: cert-manager
-    namespace: certmanager
+    namespace: cert-manager
   interval: 10m
   values:
     crds:
