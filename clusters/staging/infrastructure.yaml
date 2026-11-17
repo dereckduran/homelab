@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: cert-manager-controllers
+  name: infra-controllers
   namespace: cert-manager
 spec:
   interval: 1m0s
