@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: linkding
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
   ingressClassName: traefik
   rules:
@@ -15,3 +17,7 @@ spec:
                   number: 9090
             path: /
             pathType: Prefix
+  tls:
+  - hosts:
+      - lds.dereckduran.dev
+    secretName: ingress-cert
