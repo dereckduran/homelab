@@ -27,4 +27,14 @@ spec:
   values:
     grafana:
       adminPassword: password
-
+      ingress:
+        enabled: true
+        annotations:
+          - cert-manager.io/cluster-issuer: letsencrypt-prod
+        hosts:
+          - grafana.dereckduran.dev
+        path: /
+        tls:
+          - secretName: grafana-general-tls
+            hosts:
+              - grafana.dereckduran.dev
