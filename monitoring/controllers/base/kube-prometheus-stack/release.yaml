@@ -35,6 +35,6 @@ spec:
           - grafana.dereckduran.dev
         path: /
         tls:
-          - secretName: grafana-general-tls
+          - secretName: ingress-cert
             hosts:
               - grafana.dereckduran.dev
