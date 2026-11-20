@@ -20,6 +20,6 @@ spec:
         name: audiobookshelf
         envFrom:
           - configMapRef:
-              - audiobookshelf-configmap
+              name: audiobookshelf-configmap
         securityContext:
           allowPriviledgeEscalation: false
