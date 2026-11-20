@@ -6,6 +6,10 @@ metadata:
   name: audiobookshelf
   namespace: audiobookshelf
 spec:
+  securityContext:
+    fsGroup: 1000 # node group
+    runAsUser: 1000 # node user
+    runAsGroup: 1000 # node group
   replicas: 1
   selector:
     matchLabels:
@@ -23,3 +27,25 @@ spec:
               name: audiobookshelf-configmap
         securityContext:
           allowPriviledgeEscalation: false
+        volumeMounts:
+          - name: abs-config
+            mountPath: /config
+          - name: abs-metadata
+            mountPath: /metadata
+          - name: abs-audiobooks
+            mountPath: /audiobooks
+          - name: abs-podcasts
+            mountPath: /podcasts
+      volumes:
+        - name: abs-config
+          persistentVolumeClaim:
+            claimName: abs-config
+        - name: abs-metadata
+          peristentVolumeClaim:
+            claimName: abs-metadata
+        - name: abs-audiobooks
+          persistentVolumeClaim:
+            claimName: abs-audiobooks
+        - name: abs-podcasts
+          persistentVolumeClaim:
+            claimName: abs-podcasts
