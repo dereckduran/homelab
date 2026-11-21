@@ -26,7 +26,7 @@ spec:
           - configMapRef:
               name: audiobookshelf-configmap
         securityContext:
-          allowPriviledgeEscalation: false
+          allowPrivilegeEscalation: false
         volumeMounts:
           - name: abs-config
             mountPath: /config
@@ -41,7 +41,7 @@ spec:
           persistentVolumeClaim:
             claimName: abs-config
         - name: abs-metadata
-          peristentVolumeClaim:
+          persistentVolumeClaim:
             claimName: abs-metadata
         - name: abs-audiobooks
           persistentVolumeClaim:
