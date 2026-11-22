@@ -20,7 +20,7 @@ spec:
         runAsUser: 1000 # node user
         runAsGroup: 1000 # node group
       containers:
-      - image: advplyr/audiobookshelf:2.37.2
+      - image: advplyr/audiobookshelf:2.38.0
         name: audiobookshelf
         envFrom:
           - configMapRef:
