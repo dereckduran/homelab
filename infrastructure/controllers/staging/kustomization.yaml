@@ -5,3 +5,4 @@ resources:
   - renovate
   - cloudflare-api-token-secret.yaml
   - cloudflare
+  - tailscale
