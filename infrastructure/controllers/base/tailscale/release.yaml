@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
     name: tailscale-operator
@@ -28,6 +28,6 @@ sops:
             -----END AGE ENCRYPTED FILE-----
           recipient: age1aljzk45u3887w3zu7s6cnn5tghg3khckllg26axzfmd4h0gxzv6qs0n3mh
     encrypted_regex: ^(oauth)$
-    lastmodified: "2026-11-27T02:16:18Z"
-    mac: ENC[AES256_GCM,data:gQBXzL6QWTZCRcnzYJ49lyCPjKPpoc26h+hgGek0x08z++veCPM2THMu/9DW1Y74jiwWcAyx/D44dyGjKF5iBV0SzXvC7elZwXSXtipqQR5/2MWdOaiYsLP36mqRHDzx2QGV7zAKiX6cTNlppVhHjj9iyvwfntnajc9KuVdtd2Q=,iv:eh7Qn0805+yunaLzEmMnbqDzkysT2itWJtrNi/oXOVc=,tag:cp4xcMI8UhcgVj4cFAmCMg==,type:str]
+    lastmodified: "2026-11-27T02:54:56Z"
+    mac: ENC[AES256_GCM,data:ed2yDEWeC/vUXSkmZwHGeJUUzJBR6BXaPv1pWvo0k8p6A/x/fFbqjZt3Gx5EVbiwznZd9s5cxHXhMHIfMB1ri5fGlZymriQNlQTWq7iwXPOgb/PvYPHJBM7MuQ2K2UQ3Zf4g/4uLi5urf1fudDZs3w+RjkHLZe93+vXmGsCkirc=,iv:8ihuSoA6uj+GStgl1vEUyYJdYuS4c0u/9LTljhAzJk8=,tag:BEWmc9qHLrA/vi6mDoIRug==,type:str]
     version: 3.13.3
